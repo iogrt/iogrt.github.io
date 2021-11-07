@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-23 Sat 16:38 -->
+<!-- 2021-11-07 Sun 12:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>School Notes</title>
@@ -229,12 +229,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3dc5b22">1. SAD 🔀</a>
+<li><a href="#orgf3f55be">1. SAD 🔀</a>
 <ul>
-<li><a href="#orgb2bf776">1.1. SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></a>
+<li><a href="#orga6dab38">1.1. SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></a>
 <ul>
-<li><a href="#orgf7dc769">1.1.1. Preciso saber:</a></li>
-<li><a href="#org0158208">1.1.2. Conceitos base (pdf 1):</a></li>
+<li><a href="#org99eeed0">1.1.1. Info sobre o 1 teste prático:</a></li>
+<li><a href="#orgf085c79">1.1.2. Conceitos base</a></li>
+<li><a href="#orge41a9e3">1.1.3. Conceitos Data warehouse</a></li>
+<li><a href="#org90c0ad3">1.1.4. servidores OLAP / modelos físicos de armazenamento de dados</a></li>
 </ul>
 </li>
 </ul>
@@ -242,41 +244,24 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org3dc5b22" class="outline-2">
-<h2 id="org3dc5b22"><span class="section-number-2">1</span> SAD 🔀</h2>
+<div id="outline-container-orgf3f55be" class="outline-2">
+<h2 id="orgf3f55be"><span class="section-number-2">1</span> SAD 🔀</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb2bf776" class="outline-3">
-<h3 id="orgb2bf776"><span class="section-number-3">1.1</span> SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></h3>
+<div id="outline-container-orga6dab38" class="outline-3">
+<h3 id="orga6dab38"><span class="section-number-3">1.1</span> SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgf7dc769" class="outline-4">
-<h4 id="orgf7dc769"><span class="section-number-4">1.1.1</span> Preciso saber:</h4>
+<div id="outline-container-org99eeed0" class="outline-4">
+<h4 id="org99eeed0"><span class="section-number-4">1.1.1</span> Info sobre o 1 teste prático:</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
-(De acordo com teste de conhecimentos 1)
+perguntas escolha múltipla e correspondência (nada de desenvolvimento). 20 perguntas para 60 minutos. Sem consulta. Matéria toda.
 </p>
-<ul class="org-ul">
-<li>Etapas do processo de tomada de decisão e sua ordem</li>
-<li>OLTP vs OLAP, diferenças e características principais</li>
-<li>conceitos OLAP (data cube, data mart, metadata, roll-up, drill-down, drill-accross, sistema fonte, ROLAP, MOLAP, HOLAP)</li>
-<li>Data warehouses: 
-<ul class="org-ul">
-<li>what's a data warehouse de acordo com <i>Bill Inmon</i></li>
-<li>desenhar arquitetura de um data warehouse de acordo com Ralph Kimball</li>
-<li>atividades principais na construcao do data warehouse, de acordo com Ralph Kimball</li>
-<li>etapas/fases de construcao de um data warehouse</li>
-</ul></li>
-</ul>
 </div>
-<ol class="org-ol">
-<li><a id="org1aff017"></a><span class="todo TODO">TODO</span> ver testes de anos passados<br /></li>
-</ol>
 </div>
-
-
-<div id="outline-container-org0158208" class="outline-4">
-<h4 id="org0158208"><span class="section-number-4">1.1.2</span> Conceitos base (pdf 1):</h4>
+<div id="outline-container-orgf085c79" class="outline-4">
+<h4 id="orgf085c79"><span class="section-number-4">1.1.2</span> Conceitos base</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <dl class="org-dl">
 <dt>SAD (Sistemas de apoio à decisão)</dt><dd>Resolvem problemas complexos e mal estruturados com técnicas <b>analíticas</b> e processamento de dados. Devem ser interativos e ter interface amigável.</dd>
@@ -306,6 +291,7 @@
 </ul></li>
 </ul></dd>
 <dt>Sistemas analiticos ( Data Warehouses)</dt><dd><ul class="org-ul">
+<li>Uma base de dados que é mantida <b>em separado</b> das BDs operacionais. Suportando o processamento de informação com dados históricos consolidados para análise.</li>
 <li>Armazenam grandes quantidades de dados, para fins especificos. Dados dependentes do tempo, nao volatil. estruturas de dados otimizadas para consulta.</li>
 <li>Grandes quantidades, mas apenas os dados uteis para o processo de decisão.</li>
 <li>transformar dados de BD operacionais para DW:
@@ -322,7 +308,10 @@
 </ul></li>
 <li>Não volatilidade:
 Os dados não são modificados, após serem carregados podem apenas ser consultados. Devido a isto, a estrutura de dados é <b>otimizada para consulta</b> (desnormalizando do modelo físico)</li>
-</ul>
+</ul></dd>
+</dl>
+
+
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -335,7 +324,7 @@ Os dados não são modificados, após serem carregados podem apenas ser consulta
 <thead>
 <tr>
 <th scope="col" class="org-left">BD operacional (OLTP)</th>
-<th scope="col" class="org-left">Data Warehouse (OLAP)</th>
+<th scope="col" class="org-left">Data Warehouse</th>
 </tr>
 </thead>
 <tbody>
@@ -361,7 +350,7 @@ Os dados não são modificados, após serem carregados podem apenas ser consulta
 
 <tr>
 <td class="org-left">atualizada em real-time</td>
-<td class="org-left">atualizada periodicamente por carregamento</td>
+<td class="org-left">periodicamente por carregamento (batch)</td>
 </tr>
 
 <tr>
@@ -373,9 +362,140 @@ Os dados não são modificados, após serem carregados podem apenas ser consulta
 <td class="org-left">Event-driven (os processos geram dados</td>
 <td class="org-left">Data-Driven (Os dados geram respostas)</td>
 </tr>
+
+<tr>
+<td class="org-left">Tamanho MB a GB</td>
+<td class="org-left">Tamanho TB a PT</td>
+</tr>
+
+<tr>
+<td class="org-left">Granularidade atómica</td>
+<td class="org-left">Granularidade atómica e agregada</td>
+</tr>
+
+<tr>
+<td class="org-left">Origem de dados: interna</td>
+<td class="org-left">Origem de dados interna E externa</td>
+</tr>
 </tbody>
-</table></dd>
-</dl>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orge41a9e3" class="outline-4">
+<h4 id="orge41a9e3"><span class="section-number-4">1.1.3</span> Conceitos Data warehouse</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+O que é uma <i>data warehouse</i> de acordo com <b>Bill Inmon?</b>
+</p>
+<p class="verse">
+Collection of data in support of management's <b>decision making</b> process.<br />
+- subject oriented<br />
+- integração e consistência da informação<br />
+- time variant<br />
+- non volatile<br />
+- otimização para consulta<br />
+</p>
+<ul class="org-ul">
+<li>Data warehousing : o processo de construção e utilização de <i>data warehouses</i></li>
+
+<li>OnLine Transacional Processing: o conjunto de interfaces e aplicações para o processamento analitico</li>
+<li>Data Mart: divisão lógica de um Data warehouse, acessado pelo cliente para obter informações. É comum cada departamento ter o seu <i>data mart</i></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org04999ce"></a><span class="todo TODO">TODO</span> ver também desenho do cuboid<br /></li>
+</ol>
+<li><a id="org8daae53"></a>Cubo de dados<br />
+<div class="outline-text-5" id="text-1-1-3-1">
+<p>
+Por exemplo, para um armazém algumas <b>métricas de negócio</b> utéis são:
+</p>
+<ul class="org-ul">
+<li>Quantidade total em stock</li>
+<li>Quantidades totais em stock <b>por</b> fornecedor</li>
+<li>Quantidades totais em stock <b>por</b> produto</li>
+<li>Quantidades totais em stock <b>por</b> fornecedor e produto</li>
+</ul>
+<p>
+A <b>agregação</b> é uma <b>operação comum</b>. Os dados são agregados de multiplas formas e todos os agrupamentos possiveis têm de ser considerados.
+Para resolver este problema de processamento analítico, os dados OLAP são estruturados num <b>cubo de dados</b>.
+</p>
+
+<ul class="org-ul">
+<li><p>
+🎲 <b>Cubo de dados</b>:
+</p>
+<p class="verse">
+Representação <i>multidimensional</i> do DW, onde as dimensões correspondem ao número de variáveis independentes e as variáveis dependentes estão armazenadas nas células do cubo.<br />
+</p></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgb560251"></a>Granularidade<br />
+<div class="outline-text-5" id="text-1-1-3-2">
+<p>
+<a href="https://www.youtube.com/watch?v=wRvPkXTKnmg">Como sempre, o indiano explica bem</a>
+</p>
+
+<p>
+O nível de granularidade é o inverso da <i>profundidade</i> do dado. Por exemplo, o tempo pode ser definido por:
+</p>
+<ul class="org-ul">
+<li>Ano <b>(mais grão)</b></li>
+<li>Ano e mês</li>
+<li>Data</li>
+<li>Data e Hora <b>(menos grão/ nivel atómico)</b></li>
+</ul>
+<p>
+O nível mais pequeno de grão existente no DW designa-se o <i>nivel atómico dos dados</i>.
+É essencial que a data warehouse mantenha o mesmo nível de granularidade e é recomendado ter o grão mais pequeno possível.
+</p>
+</div>
+</li>
+<li><a id="org7d6b528"></a>Operações OLAP:<br />
+<div class="outline-text-5" id="text-1-1-3-3">
+<p>
+Num cubo de dados são <b>instantâneas</b> enquanto numa bd relacional podem demorar <b>horas</b>
+</p>
+<ul class="org-ul">
+<li><p>
+Drill-down (Drilling): desagregar dados, reduzindo a granularidade
+</p>
+
+<p>
+<i>Ex:</i> dados agregados por mês -&gt; agregados por dia
+</p></li>
+<li><p>
+Roll-up (Rolling): agregar dados, aumentando a granularidade
+</p>
+
+<p>
+<i>Ex:</i> dados agregados por mês -&gt; agregados por ano
+</p>
+<p class="verse">
+ℹ Drill-down e roll-up refere-se a uma diferença entre queries, em contexto de teste uma só query não estará a fazer estas operações<br />
+ℹ O drill-down e roll-up podem ser feitos ao ponto de subir/descer as dimensões do cuboid<br />
+</p></li>
+<li>Slicing: 🔪 cortar o cubo fixando um ponto de uma dimensão, ficando assim com menos uma dimensão (ex: <code>filter(date=14.12.2001)</code> )
+Nas outras dimensões continua a ser possível fazer drill-down/roll-up</li>
+<li>Dicing: 🎲 filtrar ranges no cubo, resultando num subcubo (ex: <code>filter(0&gt;temperature&gt;10 &amp;&amp; 10 &gt; sales &gt; 20</code>)</li>
+<li>Pivoting: rodar o cubo, normalmente trocando linhas com colunas. Apenas tem efeito visual</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org90c0ad3" class="outline-4">
+<h4 id="org90c0ad3"><span class="section-number-4">1.1.4</span> servidores OLAP / modelos físicos de armazenamento de dados</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li>ROLAP: Relational OLAP, OLAP em motores de db relacionais. Extensão do SQL ( o que utilizamos)</li>
+<li>MOLAP: OLAP em motores de bd <b>multidimensionais</b></li>
+<li>HOLAP: Hybrid OLAP junta db relacional e multidimensional</li>
+</ul>
 </div>
 </div>
 </div>
@@ -383,7 +503,7 @@ Os dados não são modificados, após serem carregados podem apenas ser consulta
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Duarte Dias</p>
-<p class="date">Created: 2021-10-23 Sat 16:38</p>
+<p class="date">Created: 2021-11-07 Sun 12:25</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
