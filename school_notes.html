@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-07 Sun 12:25 -->
+<!-- 2021-11-08 Mon 13:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>School Notes</title>
@@ -229,14 +229,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf3f55be">1. SAD 🔀</a>
+<li><a href="#org703dc52">1. SAD 🔀</a>
 <ul>
-<li><a href="#orga6dab38">1.1. SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></a>
+<li><a href="#orgd2611c4">1.1. SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></a>
 <ul>
-<li><a href="#org99eeed0">1.1.1. Info sobre o 1 teste prático:</a></li>
-<li><a href="#orgf085c79">1.1.2. Conceitos base</a></li>
-<li><a href="#orge41a9e3">1.1.3. Conceitos Data warehouse</a></li>
-<li><a href="#org90c0ad3">1.1.4. servidores OLAP / modelos físicos de armazenamento de dados</a></li>
+<li><a href="#orgaf3bb00">1.1.1. Info sobre o 1 teste prático:</a></li>
+<li><a href="#org5e33563">1.1.2. Conceitos base</a></li>
+<li><a href="#org5842519">1.1.3. Conceitos Data warehouse</a></li>
+<li><a href="#org37bb37f">1.1.4. Processo de Data Warehousing</a></li>
+<li><a href="#org1fbc0f8">1.1.5. Modelação Dimensional</a></li>
+<li><a href="#org6f1ad43">1.1.6. estimativa do tamanho do DW</a></li>
 </ul>
 </li>
 </ul>
@@ -244,24 +246,24 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf3f55be" class="outline-2">
-<h2 id="orgf3f55be"><span class="section-number-2">1</span> SAD 🔀</h2>
+<div id="outline-container-org703dc52" class="outline-2">
+<h2 id="org703dc52"><span class="section-number-2">1</span> SAD 🔀</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga6dab38" class="outline-3">
-<h3 id="orga6dab38"><span class="section-number-3">1.1</span> SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></h3>
+<div id="outline-container-orgd2611c4" class="outline-3">
+<h3 id="orgd2611c4"><span class="section-number-3">1.1</span> SAD Theory&#xa0;&#xa0;&#xa0;<span class="tag"><span class="export">export</span></span></h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org99eeed0" class="outline-4">
-<h4 id="org99eeed0"><span class="section-number-4">1.1.1</span> Info sobre o 1 teste prático:</h4>
+<div id="outline-container-orgaf3bb00" class="outline-4">
+<h4 id="orgaf3bb00"><span class="section-number-4">1.1.1</span> Info sobre o 1 teste prático:</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 perguntas escolha múltipla e correspondência (nada de desenvolvimento). 20 perguntas para 60 minutos. Sem consulta. Matéria toda.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf085c79" class="outline-4">
-<h4 id="orgf085c79"><span class="section-number-4">1.1.2</span> Conceitos base</h4>
+<div id="outline-container-org5e33563" class="outline-4">
+<h4 id="org5e33563"><span class="section-number-4">1.1.2</span> Conceitos base</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <dl class="org-dl">
 <dt>SAD (Sistemas de apoio à decisão)</dt><dd>Resolvem problemas complexos e mal estruturados com técnicas <b>analíticas</b> e processamento de dados. Devem ser interativos e ter interface amigável.</dd>
@@ -383,8 +385,8 @@ Os dados não são modificados, após serem carregados podem apenas ser consulta
 </div>
 
 
-<div id="outline-container-orge41a9e3" class="outline-4">
-<h4 id="orge41a9e3"><span class="section-number-4">1.1.3</span> Conceitos Data warehouse</h4>
+<div id="outline-container-org5842519" class="outline-4">
+<h4 id="org5842519"><span class="section-number-4">1.1.3</span> Conceitos Data warehouse</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 O que é uma <i>data warehouse</i> de acordo com <b>Bill Inmon?</b>
@@ -401,13 +403,12 @@ Collection of data in support of management's <b>decision making</b> process.<br
 <li>Data warehousing : o processo de construção e utilização de <i>data warehouses</i></li>
 
 <li>OnLine Transacional Processing: o conjunto de interfaces e aplicações para o processamento analitico</li>
-<li>Data Mart: divisão lógica de um Data warehouse, acessado pelo cliente para obter informações. É comum cada departamento ter o seu <i>data mart</i></li>
 </ul>
 </div>
 <ol class="org-ol">
-<li><a id="org04999ce"></a><span class="todo TODO">TODO</span> ver também desenho do cuboid<br /></li>
+<li><a id="org6c62ed1"></a><span class="todo TODO">TODO</span> ver também desenho do cuboid<br /></li>
 </ol>
-<li><a id="org8daae53"></a>Cubo de dados<br />
+<li><a id="org25c56e6"></a>Cubo de dados<br />
 <div class="outline-text-5" id="text-1-1-3-1">
 <p>
 Por exemplo, para um armazém algumas <b>métricas de negócio</b> utéis são:
@@ -434,7 +435,7 @@ Representação <i>multidimensional</i> do DW, onde as dimensões correspondem a
 </div>
 </li>
 
-<li><a id="orgb560251"></a>Granularidade<br />
+<li><a id="org1230f86"></a>Granularidade<br />
 <div class="outline-text-5" id="text-1-1-3-2">
 <p>
 <a href="https://www.youtube.com/watch?v=wRvPkXTKnmg">Como sempre, o indiano explica bem</a>
@@ -455,7 +456,7 @@ O nível mais pequeno de grão existente no DW designa-se o <i>nivel atómico do
 </p>
 </div>
 </li>
-<li><a id="org7d6b528"></a>Operações OLAP:<br />
+<li><a id="orga7bd95f"></a>Operações OLAP:<br />
 <div class="outline-text-5" id="text-1-1-3-3">
 <p>
 Num cubo de dados são <b>instantâneas</b> enquanto numa bd relacional podem demorar <b>horas</b>
@@ -486,16 +487,236 @@ Nas outras dimensões continua a ser possível fazer drill-down/roll-up</li>
 </ul>
 </div>
 </li>
-</ol>
-</div>
-<div id="outline-container-org90c0ad3" class="outline-4">
-<h4 id="org90c0ad3"><span class="section-number-4">1.1.4</span> servidores OLAP / modelos físicos de armazenamento de dados</h4>
-<div class="outline-text-4" id="text-1-1-4">
+<li><a id="org5cc06d1"></a>servidores OLAP / modelos físicos de armazenamento de dados<br />
+<div class="outline-text-5" id="text-1-1-3-4">
 <ul class="org-ul">
 <li>ROLAP: Relational OLAP, OLAP em motores de db relacionais. Extensão do SQL ( o que utilizamos)</li>
 <li>MOLAP: OLAP em motores de bd <b>multidimensionais</b></li>
-<li>HOLAP: Hybrid OLAP junta db relacional e multidimensional</li>
+<li>HOLAP: Hybrid OLAP junta db relacional e multidimensiona</li>
 </ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org37bb37f" class="outline-4">
+<h4 id="org37bb37f"><span class="section-number-4">1.1.4</span> Processo de Data Warehousing</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Existem duas grandes metodologias para estruturar o DW:
+</p>
+
+<p>
+Corporate warehouse: Arquitetura para coleção de dados de <b>fontes heterogéneas</b> numa base de dados com elevado nível de detalhe e dependente do tempo
+Dimensional Design: Arquitetura para diferente bases de dados, data marts, orgnizadas em função dos <b>processos de negócio</b> da organização
+</p>
+
+<p>
+<i>Buzzwords:</i>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Corporate Warehouse</td>
+<td class="org-left">Dimensonal Design</td>
+</tr>
+
+<tr>
+<td class="org-left">Autor</td>
+<td class="org-left">Bill Inmon</td>
+<td class="org-left">Ralph Kimball</td>
+</tr>
+
+<tr>
+<td class="org-left">Modelo</td>
+<td class="org-left">complexo (DERS) (???)</td>
+<td class="org-left">dimensional</td>
+</tr>
+
+<tr>
+<td class="org-left">Integração via</td>
+<td class="org-left">modelo de dados da organização</td>
+<td class="org-left">dimensões conformes</td>
+</tr>
+
+<tr>
+<td class="org-left">Abordagem</td>
+<td class="org-left">Top-down</td>
+<td class="org-left">Bottom-up</td>
+</tr>
+
+<tr>
+<td class="org-left">Data marts</td>
+<td class="org-left">dados agregados</td>
+<td class="org-left">dados ao nível atómico</td>
+</tr>
+
+<tr>
+<td class="org-left">Usado na prática da UC</td>
+<td class="org-left">Não</td>
+<td class="org-left">Sim</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org6dacdae"></a>Arquitetura do DW:<br />
+<div class="outline-text-5" id="text-1-1-4-1">
+<p class="verse">
+<b>Sistemas fonte -&gt; Data Staging Area -&gt; Data Marts -&gt; Utilizadores Finais</b><br />
+</p>
+<dl class="org-dl">
+<dt>Sistemas fonte</dt><dd>de onde vem os dados, tipicamente sistemas OLTP, tendo assim as suas características (guardam poucos dados históricos, consultas de poucos registos, etc) ou ficheiros.
+Ao usar vários sistemas fonte de diversos tipos poderam existir <b>inconsistências</b> entre eles</dd>
+<dt>Data Staging Area (DSA)</dt><dd>Composta pela área de armazenamento e pelo processo <b>ETL</b>
+<dl class="org-dl">
+<dt>Processos ETL</dt><dd>Processos de Extração, Tranformação e Loading (carregamento).
+<ul class="org-ul">
+<li><p>
+Processo de Extração
+</p>
+
+<p>
+<b>compreender, selecionar e copiar</b> dados fonte para a DSA.
+</p>
+<ul class="org-ul">
+<li><b>Exportação</b> de dados (de ficheiros) <b>ou Extração</b>  de dados (de BD's)</li>
+<li><b>A primeira extração</b> é distinta das seguintes extrações (incrementais)</li>
+</ul></li>
+<li><p>
+Processo de Transformação
+</p>
+
+<p>
+<b>verifica a qualidade</b> e <b>transformar os dados</b>
+Tipos de transformação:
+</p>
+<ul class="org-ul">
+<li>Limpeza dos dados</li>
+<li>Eliminação de campos inúteis</li>
+<li>Combinação de dados de fontes diferentes (por verificação exata ou "fuzzy matches"</li>
+</ul></li>
+<li>Processo de Carregamento
+Após transformamento, são carregados os registos em <i>bulk loading</i>, os dados são indexados e são constrúidos <b>agregados</b> de modo a acelerar as pesquisas</li>
+</ul></dd>
+</dl></dd>
+<dt>Data Marts</dt><dd>divisão lógica do <i>data warehouse</i>. O DW é a união de <i>Data Marts</i>
+um data mart para cada <b>processo de negócio</b>
+As dimensões e os factos dos vários <i>Data Marts</i> devem ser conformes (ou seja, parecidos entre eles)
+<ul class="org-ul">
+<li>Metadados: <b>Dados</b> que descrevem dados (estrutura, formato, relação entre dados de warehouse e sistemas fonte, origem de dados e seus donos)</li>
+</ul></dd>
+<dt>Utilizadores finais</dt><dd><p>
+acedem ao DW pelas <b>aplicações analíticas</b>
+</p>
+
+<p>
+Estas permitem fazer consultas ao DW. Estas devem ser fáceis de utilizar, permitir pesquisas ad-hoc e apresentar informação de modo fácil de entender (tabelas,gráficos,dashboards,etc)
+Estas aplicações incluem:
+</p>
+<ul class="org-ul">
+<li>Modelos com capacidade de <b>previsão</b></li>
+<li>Modelos que permitem <b>agrupar e classificar</b></li>
+</ul></dd>
+</dl>
+<p>
+comportamentos
+</p>
+<ul class="org-ul">
+<li>Ferramentas de <b>data mining</b></li>
+</ul>
+</div>
+</li>
+<li><a id="org6834ae0"></a>Construção do DW<br />
+<div class="outline-text-5" id="text-1-1-4-2">
+<p class="verse">
+<b>Modelação Dimensional -&gt; Desenho Físico -&gt; Desenho do Estágio de Dados</b><br />
+</p>
+<p>
+Etapas de construção:
+</p>
+<ol class="org-ol">
+<li>Identificação de objetivos a atingir</li>
+<li>Definir infraestrutura para o projeto</li>
+<li>Identificar modelo de dados dos sistemas fonte</li>
+<li>Definir modelo de dados do Data Warehouse</li>
+<li>Definir regras para o mapeamento dos dados</li>
+<li>Extrair, integrar, purificar e racionalizar dados</li>
+<li>Exploração, afinação de desempenho e avaliação da eficácia do Data Warehouse</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org1fbc0f8" class="outline-4">
+<h4 id="org1fbc0f8"><span class="section-number-4">1.1.5</span> Modelação Dimensional</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ul class="org-ul">
+<li><p>
+Tipos de Tabelas de Factos
+</p>
+<dl class="org-dl">
+<dt>Transacionais</dt><dd></dd>
+</dl>
+<p>
+Factos que se vão medindo em múltiplos pontos discretos ao longo do tempo
+</p>
+<dl class="org-dl">
+<dt>Sumarização periódica</dt><dd></dd>
+</dl>
+<p>
+Agregam métricas de um processo de negócio em intervalos de tempo regulares
+</p>
+<dl class="org-dl">
+<dt>Sumarização acumulada</dt><dd></dd>
+</dl>
+<p>
+Cobrem o ciclo de vida completo de um acontecimento contínuo ou discreto
+</p>
+<dl class="org-dl">
+<dt>Tabelas de factos sem factos</dt><dd></dd>
+</dl></li>
+
+<li><p>
+Processo de modelação
+</p>
+
+<p>
+<b>Passos principais</b>
+</p>
+<ol class="org-ol">
+<li>Escolher o processo de negócio</li>
+<li>Definir a granularidade do processo de negócio</li>
+<li>Escolher as dimensões que vão caracterizar cada registo da tabela de factos</li>
+<li>Definir as medidas numéricas ou factos a incluir na tabela de factos</li>
+</ol></li>
+</ul>
+
+
+<p>
+Um tipo é aditivo se pode ser agregado com todos os outros, semi-aditivo se com alguns e não aditivo se com nenhum
+</p>
+</div>
+</div>
+<div id="outline-container-org6f1ad43" class="outline-4">
+<h4 id="org6f1ad43"><span class="section-number-4">1.1.6</span> estimativa do tamanho do DW</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<p>
+n de bytes de cada registo do modelo dimensional *
+dimensao tempo: 3 anos x 365 dias = 1095 dias
+loja: 100 lojas, 100.000 transacoes por loja: 10M
+total: 1095x100x100000x 44bytes = 448,7GByte
+</p>
 </div>
 </div>
 </div>
@@ -503,7 +724,7 @@ Nas outras dimensões continua a ser possível fazer drill-down/roll-up</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Duarte Dias</p>
-<p class="date">Created: 2021-11-07 Sun 12:25</p>
+<p class="date">Created: 2021-11-08 Mon 13:15</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
