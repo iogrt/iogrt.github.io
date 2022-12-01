@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title> Duarte Dias </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* css cleaner */
+      * { margin: 0; padding: 0; } 
+      /* p { margin:5px 0 10px 0; } */
+      * {font-family: 'Kalam', cursive;}
+      h1, h2, h3, h4, h5 {
+	  white-space: nowrap;
+      }
+      .screen {
+	  border: 4px solid gray;
+	  border-radius: 20px 20px;
+	  align-items: stretch;
+	  width: calc(100% - 40px - 8px);
+	  height: calc(100vh - 40px - 8px); /* full minus padding minus border*/
+	  padding: 20px;
+      }
+
+      .abs-center {
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+      }
+
+      .bigtext {
+	  font-size: 5em;
+      }
+
+      .textwrite {
+	  /* steps = chars * 2 aprox. */
+	  animation: writing 0.7s steps(8,end);
+	  animation-delay: 2.3s;
+      }
+      .textwrite-medium {
+	  animation: writing 1.4s steps(16,end);
+	  animation-delay: 2.3s;
+      }
+      .textwrite-big {
+	  animation: writing 1s steps(32,end);
+	  animation-delay: 2.3s;
+      }
+      /* to be used on screens, clear whole screen */
+      .screen-erase-short {
+	  animation: erase 1s linear forwards;
+	  animation-delay: 1s;
+      }
+      @keyframes erase {
+	  /* from { clip-path: inset(0 0% 0% 0); } */
+	  /* to { clip-path: inset(100% 100% 0 0); display: none; } */
+	  0% { clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);}
+	  50% { clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%, 0 0);}
+	  100% { clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%, 0 100%); display:none;}
+      }
+      @keyframes writing {
+	  from { clip-path: inset(0 100% 0 0); }
+	  to { clip-path: inset(0 0% 0 0); }
+      }
+
+      /* slideshow:nth-child(1), 2, etc */
+      /* use --nth-child var for ease */
+      .slideshow {
+	  position: relative;
+      }
+      /* :nth-child(1) { --nth-child: 1 } */
+      /* :nth-child(2) { --nth-child: 2 } */
+      /* :nth-child(3) { --nth-child: 3 } */
+      /* :nth-child(4) { --nth-child: 4 } */
+      .slideshow > * {
+	  position: absolute;
+      }
+      .slideshow > :nth-child(2) {
+	  visibility: hidden;
+	  animation: slides 1s linear forwards;
+	  animation-delay: 2.3s;
+      }
+      @keyframes slides {
+	  to {visibility: visible};
+      }
+      .mecard {
+	  top: 50%;
+	  transform: translate(0, -50%);
+	  padding: 100px 30px;
+	  display: flex;
+	  height: calc(100% - 200px);
+	  gap: 100px;
+      }
+
+      .content-header {
+	  padding-top: 20px;
+	  text-decoration: underline;
+      }
+      .content {
+	  max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- screen must do slideshow like switching, maybe through animations you can control the inner childs visibility? -->
+    <div class="screen slideshow">
+      <div class="abs-center screen-erase-short">
+	<h1 class="bigtext textwrite">Olá.</h1>
+      </div>
+      <div class="mecard">
+	<div  style="align-self: center">
+	  <h1 class="textwrite">Duarte Dias</h1>
+	  <p class="textwrite">Programador.</p>
+	</div>
+	<div style="align-self: top">
+	  <h3 class="content-header">Experiência</h3>
+	  <p class="content textwrite-medium">Comecei a programar em 20XX tendo X anos, inicialmente porque queria fazer um jogo com os meus amigos. Desde então, publiquei este jogo na Play Store, depois aprendendo outras tecnologias. Principalmente Web</p>
+
+	  <h3 class="content-header">Hobbies</h3>
+	  <p class="content">Toco guitarra, bla bla, configurar Linux, bla bla</p>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

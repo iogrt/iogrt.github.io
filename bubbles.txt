@@ -1,0 +1,33 @@
+      .bubble:nth-child(1) { --nth-child: 1 }
+      .bubble:nth-child(2) { --nth-child: 2 }
+      .bubble:nth-child(3) { --nth-child: 3 }
+      .bubble:nth-child(4) { --nth-child: 4 }
+      .bubble:nth-child(5) { --nth-child: 5 }
+      .bubble:nth-child(6) { --nth-child: 6 }
+      .bubble-container {
+        position: relative;
+        left: 50%;
+      }
+      .bubble {
+	  position: absolute;
+	  padding: 20px;
+	  background-color: white;
+	  border: 5px solid #eeeeee;
+	  border-radius: 50%;
+	  width: 90px;
+	  height: 90px;
+	  animation: motion linear 10s infinite;
+      }
+      .bubble > * {
+	  animation: motion linear 10s infinite;
+	  animation-direction: reverse;
+	  --distance: 0px;
+      }
+      @keyframes motion {
+	  0%{
+	      transform: rotate(calc( var(--nth-child)*120deg + 360deg)) translateX(var(--distance));
+	  }
+	  100%{
+	      transform: rotate(calc( var(--nth-child)*120deg + 0deg)) translateX(var(--distance));
+	  }
+      }

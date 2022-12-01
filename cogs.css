@@ -1,0 +1,104 @@
+#bod {
+  width: 250px;
+  height:250px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.spoke {
+  background-color: #bababa;
+  position: absolute;
+  height: 175px;
+  width:30px;
+  margin-left: -15px;
+  margin-top: -12.5px;
+  left: 50%;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.spoke + .spoke {
+  transform: rotateZ(45deg);
+}
+
+.spoke + .spoke + .spoke {
+  transform: rotateZ(-45deg);
+}
+
+.spoke + .spoke + .spoke + .spoke {
+  transform: rotateZ(90deg);
+}
+
+.cog {
+  position:absolute;
+  background-color: #bababa;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 10;
+  animation: spin 5s infinite linear;
+}
+.cog + .cog {
+  animation-delay:.19s;
+  animation: spin2 5s infinite linear;
+  margin-top: 140px;
+  margin-left: 90px;
+}
+.cog + .cog + .cog {
+  animation: spin 5s infinite linear;
+  margin-top: 0px;
+  margin-left: 180px;
+}
+.cog + .cog + .cog + .cog {
+  animation: spin2 5s infinite linear;
+  margin-top: 140px;
+  margin-left: 270px;
+}
+#bod:hover > .cog {
+    animation-play-state: paused;
+}
+
+.hole {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  z-index: 3000;
+  box-shadow: inset 0 0 90px #bababa;
+}
+
+p {
+    margin: 0;
+}
+
+.hole > * {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 70%; /* 70 + 15 + 15 = 100 */
+    padding: 15%;
+    color: white;
+    font-size: 2em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}

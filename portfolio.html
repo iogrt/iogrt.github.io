@@ -1,0 +1,145 @@
+<head>
+  <title>Duarte Dias' portfolio</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--
+      ideas: card pop out (white behind) on hover with some rotation
+      card transition fill.. must figure out how to animate it.
+      color invert on hover of the Back button
+
+      -TODO: transform cardbox to a grid so you can properly rule max 3 per row.
+      -TODO: transform card gallery to a grid and draw out the desired behaviour.
+      -TODO: fazer legendas para imagens, abaixo da imagem com border radius
+      -->
+  <div class="start">
+  <nav class="nav">
+      <div class="logo">
+	<img src="img/bmo.PNG" class="logo-img"/>
+      </div>
+      <div class="title">
+	<strong>Duarte Dias - Portfolio</strong>
+      </div>
+      <a href="./about.html" class="section">
+	  <strong>About me</strong>
+      </a>
+  </nav>
+  <div class="main">
+    <button id="portfolio-back"><strong>&#9166;  SEE ALL</strong></button>
+    <div class="cardbox">
+      <div class="card">
+	<!-- TODO: css this -->
+	<h1 style="display: inline"><em>vCard </em></h1><a class="card-detail" href="https://github.com/iogrt/vCard" target="_blank">source code </a><br><br>
+	<p><strong>Technology: </strong><strongish>Laravel (PHP) + Websockets + Vue (Javascript)</strongish></p>
+	<p><strongish>Single Page App for virtual banking cards</strongish></p><br/>
+	<div class="card-front">
+	    <img src="img/portfolio/vCard_homepage.png" width=100%/>
+	</div>
+	<div class="card-detail">
+	  <p>Main features:</p>
+	  <ul>
+	    <li>Creating virtual cards (vCards) associated to phone numbers;</li>
+	    <li>Transfer "money" (simulated) between <strong>vCards</strong> or to other payment services (simulated);</li>
+	    <li>Create categories and assign transactions to categories;</li>
+	    <li>Acess statistics like balance and number of transactions throughout time;</li>
+	  </ul>
+	  <div class="card-gallery">
+	    <img src="img/portfolio/vCard_homepage.png" width=44%/>
+	    <img src="img/portfolio/vCard_graph.png" width=56%/><br>
+	  </div>
+	  <br>
+	  <p>Also contains management tools for administrator accounts like account blocking, adding money to a card and managing payment services.</p>
+	  <p>The websocket server gives the app realtime updates for things like updating balance upon receiving a transaction, while the backend server acts like an API and implements authentication through OAuth. All interface logic is handled by Vue.</p>
+	  <br>
+	  <div class="card-gallery card-detail">
+	    <img src="img/portfolio/vCard_table1.png" width=40%/>
+	    <img src="img/portfolio/vCard_table2.png" width=40%/>
+	  </div>
+	  Detail only inside!
+	</div>
+	<div class="card-badge"><strong>2022</strong></div>
+      </div>
+      <div class="card">
+	<h1><em>Regul-A Platform</em></h1><br>
+	<strongish> 
+	  <p><strong>Technology: </strong>Laravel (PHP) website + Android App + Firebase</p>
+	  <p>Mobile app converted from Java to Kotlin</p>
+	</strongish>
+	<div class="card-detail">
+	  <br>
+	  <p>This was my final project in university. I developed a new version of the existing platform, focusing on making it ready for a product launch.</p>
+	  <br>
+	  <h3>Some of the issues I tackled:</h3>
+	  <ul>
+	    <li>Added monitoring capabilities with Google Analytics and Firebase Crashlytics;</li>
+	    <li>Created end-to-end tests in both interfaces and unit tests for security rules;</li>
+	    <li>Deployed the web server using NixOS and created a CI/CD pipeline;</li>
+	    <li>Updated the android code to use Kotlin;</li>
+	  </ul>
+	  <br>
+	  <p>Unfortunately, I cannot share the source code.</p><br>
+	</div>
+	<div class="card-gallery">
+	  <img src="img/portfolio/regula_web.png" width="70%"/>
+	  <img src="img/portfolio/regula_android.png" width="25%" />
+	  <!-- TODO: pic of CI/CD -->
+	  <!-- tests running excert in video (convert to gif if possible) -->
+	</div>
+	<div class="card-badge"><strong>2022</strong></div>
+      </div>
+      <div class="card">
+	<h1 style="display: inline"><em>lyricRacer </em></h1><a class="card-detail" href="https://github.com/iogrt/lyricRacer" target="_blank">source code </a><br><br>
+	<p>Simple Single Page App in React</p>
+	<p>typeracer but for lyrics</p>
+	<img src="img/portfolio/lyricRacer1.png" width="100%"/>
+	<div class="card-detail">
+	  <br>
+	  <p>Upon selecting your song. You can then type out the lyrics.</p>
+	  <img  src="img/portfolio/lyricRacer2.png" width="75%" />
+	  <!-- talk a bit about the technology and keywords -->
+	</div>
+	<div class="card-badge"><strong>2020</strong></div>
+      </div>
+      <div class="card">
+	<h1><em>Engineer Layout</em></h1><br>
+	<p>Layout for the <a href="https://xmonad.org/" target="_blank">XMonad</a> Window Manager</p><br>
+	<img src="img/portfolio/engineer_layout.gif" width="100%"/>
+	<br><br>
+	<p class="card-detail">I built a customizable layout for the XMonad Window Manager.  It allows you to set pre-defined layouts for when a specific group of windows is present on the workspace. Window categories and how to categorise them is left up to you to define.</p>
+	<br>
+	<p class="card-detail"><strong>Language</strong>: Haskell</p>
+	<div class="card-badge"><strong>2021</strong></div>
+      </div>
+      <div class="card">
+	<h1>MagicShirt</h1><br>
+	<p>Laravel app for t-shirt printing shop.</p>
+	<div class="card-badge"><strong>2021</strong></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+  var cards = document.querySelectorAll(".card");
+  var backBtn = document.querySelector('#portfolio-back')
+
+  cards.forEach(x => x.addEventListener(
+    'click',
+    () => {
+      cards.forEach(y=> y.classList.add('card-hide'));/* css overriding power! */
+      x.classList.add('card-zoom');
+      backBtn.style.display = "block";
+    }
+  ));
+
+  backBtn.addEventListener('click', () => {
+    cards.forEach(x =>
+      x.classList.remove('card-hide','card-zoom')
+    )
+    backBtn.style.display = "none";
+  })
+</script>
