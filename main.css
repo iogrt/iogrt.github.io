@@ -1,6 +1,8 @@
 /* clear styles */
 * { margin: 0; padding: 0; } 
 * {font-family: 'Roboto', sans-serif}
+
+
 body {
     color: white;
 }
@@ -71,7 +73,6 @@ a[target="_blank"]:after {
     border-radius: 0 0 80% 0;
     border-bottom: 3px solid white;
     border-right: 3px solid white;
-
 }
 .title {
     background-color: #2AC4BAAA;
@@ -82,6 +83,8 @@ a[target="_blank"]:after {
     display: flex;
     align-items: center;
     z-index: 1;
+
+    font-weight: 300; font-size: 1.3em;
 }
 .section {
     border-right: 2px solid white;
@@ -122,8 +125,6 @@ a[target="_blank"]:after {
 }
 .card {
     position:relative;
-    min-width: 300px;
-    max-width: 500px;
     min-height: 200px;
     border: 3px solid white;
     border-radius: 40px;
@@ -145,16 +146,16 @@ a[target="_blank"]:after {
 }
 .card-zoom {
     display: block; /* override hide */
-    max-width: 100%; /* override normal cards */
     border-color: #2AC4BA;
 
-    /* font-size: 1.5em; */
+    grid-area: 1 / 1 / -1 / -1;
     animation: appear 0.7s;
 }
 .card:hover:not(.card-zoom){
     border-color: #2AC4BA;
     transform-origin: top left;
     transform: rotate(3deg);
+    cursor: pointer;
 }
 
 .card:not(.card-zoom) .card-detail{
@@ -185,13 +186,13 @@ a[target="_blank"]:after {
     z-index: -3;
     border-radius: 40px 0 40px 0; /* same as .card */
 }
+
 .cardbox {
-    display: flex;
-    gap: 50px 50px;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    align-self: stretch;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    box-sizing: border-box;
 }
 #portfolio-back {
     background-color: black;
@@ -204,7 +205,19 @@ a[target="_blank"]:after {
     margin-left: 20px;
 
     display: none; /* start invis */
+    animation: slidein 1s ease-out;
+
+    transition: background-color 0.5s ease-in;
 }
-.cardbox > * {
-    /* flex-grow: 1; */
+#portfolio-back:hover {
+    background-color: #555555;
+}
+
+@keyframes slidein {
+    0% {
+	transform: translateX(-200px);
+    }
+    100% {
+	transform: translateX(0px);
+    }
 }
