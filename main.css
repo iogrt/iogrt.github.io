@@ -2,7 +2,6 @@
 * { margin: 0; padding: 0; } 
 * {font-family: 'Roboto', sans-serif}
 
-
 body {
     color: white;
 }
@@ -148,6 +147,7 @@ a[target="_blank"]:after {
     display: block; /* override hide */
     border-color: #2AC4BA;
 
+    font-size: 1.3em;
     grid-area: 1 / 1 / -1 / -1;
     animation: appear 0.7s;
 }
@@ -191,7 +191,7 @@ a[target="_blank"]:after {
     width: 100%;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
     box-sizing: border-box;
 }
 #portfolio-back {
