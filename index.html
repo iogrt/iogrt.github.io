@@ -1,27 +1,33 @@
-<head>
-  <title>Duarte Dias' portfolio</title>
-  <link rel="stylesheet" href="./main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="start">
-  <nav class="nav">
-      <div class="logo">
-	<img src="img/bmo.PNG" class="logo-img"/>
-      </div>
-      <h2 class="title">Duarte Dias</h2>
-  </nav>
-  <div class="main">
-    <button id="portfolio-back"><strong><i class="fa fa-arrow-left" aria-hidden="true"></i> SEE ALL</strong></button>
-    <div class="cardbox">
-      <div class="card" style="max-width: 900px"> <!-- keep a small size on zoom -->
-	<!-- TODO: css this -->
-	<h1>📌<em> About me </em></h1>
-	  <br>
-	  <!-- break lines more often -->
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <title>Duarte Dias' portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Duarte Dias' portfolio"/>
+    <meta property="og:url" content="https://iogrt.github.io"/>
+    <meta property="og:image" content="img/bmo.PNG" />
+    
+  </head>
+  <body>
+    <div class="start">
+      <nav class="nav">
+	<div class="logo">
+	  <img src="img/bmo.PNG" class="logo-img"/>
+	</div>
+	<h2 class="title">Duarte Dias</h2>
+      </nav>
+      <div class="main">
+	<button id="portfolio-back"><strong><i class="fa fa-arrow-left" aria-hidden="true"></i> SEE ALL</strong></button>
+	<div class="cardbox">
+	  <div class="card" style="max-width: 900px"> <!-- keep a small size on zoom -->
+	    <!-- TODO: css this -->
+	    <h1>📌<em> About me </em></h1>
+	    <br>
+	    <!-- break lines more often -->
 	    <p>Hello, I'm a software developer based in Portugal 🇵🇹. <br> I started out in middle school coding as a hobby in the Unity game engine. </p>
 	    <p>I've since been learning and developing various kinds of software. Being most comfortable with building frontend apps (using HTML, CSS and Javascript with Vue or React); backend servers in Laravel/PHP or Python and recently functional programming with Haskell.</p><br>
 	    <div class="card-front">(...) <em>click to read more</em></div>
@@ -30,135 +36,136 @@
 	      <p>I am a Linux user and currently run my laptop with the NixOS distro.</p><br>
 	    </div><br>
 	    <p>You can find my projects through my <a target="_blank" href="https://github.com/iogrt"><i class="fa-brands fa-github"></i> Github profile </a></p>
-	  <!-- TODO: make some kind of timeline graph with interests mapped and overlapped use graph libs? or just photoshop your own!-->
-	  <br>
-	</div>
-      <div class="card">
-	<h1 style="display: inline"><em>vCard </em></h1><a class="card-detail" href="https://github.com/iogrt/vCard" target="_blank">source code </a>
-	<p><strongish>Laravel (PHP) + Websockets (Node.js) + Vue (Javascript)</strongish></p>
-	<p>Single Page App for virtual banking cards</p><br/>
-	<div class="card-front">
-	    <img src="img/portfolio/vCard_homepage.png" width=100%/>
-	</div>
-	<div class="card-detail">
-	  <p>This website allows users to create virtual banking accounts for sending money to others. The money was simulated.</p><br/>
-	  <p>Main features:</p>
-	  <ul>
-	    <li>Creating virtual cards (vCards) associated to phone numbers;</li>
-	    <li>Transfer "money" (simulated) between <strong>vCards</strong> or to other payment services (simulated);</li>
-	    <li>Create categories and assign transactions to categories;</li>
-	    <li>Access statistics like balance and number of transactions throughout time;</li>
-	  </ul>
-	  <br>
-	  <div class="card-gallery">
-	    <img src="img/portfolio/vCard_homepage.png" width=44%/>
-	    <img src="img/portfolio/vCard_graph.png" width=56%/><br>
+	    <!-- TODO: make some kind of timeline graph with interests mapped and overlapped use graph libs? or just photoshop your own!-->
+	    <br>
 	  </div>
-	  <br>
-	  <p>Also contains management tools for administrator accounts like account blocking, adding money to a card and managing payment services.</p>
-	  <p>The websocket server gives the app realtime updates for things like updating balance upon receiving a transaction, while the backend server acts like an API and implements authentication through OAuth. All interface logic is handled by Vue.</p>
-	  <br>
-	  <div class="card-gallery card-detail">
-	    <img src="img/portfolio/vCard_table1.png" width=40%/>
-	    <img src="img/portfolio/vCard_table2.png" width=40%/>
+	  <div class="card">
+	    <h1 style="display: inline"><em>vCard </em></h1><a class="card-detail" href="https://github.com/iogrt/vCard" target="_blank">source code </a>
+	    <p><strongish>Laravel (PHP) + Websockets (Node.js) + Vue (Javascript)</strongish></p>
+	    <p>Single Page App for virtual banking cards</p><br/>
+	    <div class="card-front">
+	      <img src="img/portfolio/vCard_homepage.png" width=100%/>
+	    </div>
+	    <div class="card-detail">
+	      <p>This website allows users to create virtual banking accounts for sending money to others. The money was simulated.</p><br/>
+	      <p>Main features:</p>
+	      <ul>
+		<li>Creating virtual cards (vCards) associated to phone numbers;</li>
+		<li>Transfer "money" (simulated) between <strong>vCards</strong> or to other payment services (simulated);</li>
+		<li>Create categories and assign transactions to categories;</li>
+		<li>Access statistics like balance and number of transactions throughout time;</li>
+	      </ul>
+	      <br>
+	      <div class="card-gallery">
+		<img src="img/portfolio/vCard_homepage.png" width=44%/>
+		<img src="img/portfolio/vCard_graph.png" width=56%/><br>
+	      </div>
+	      <br>
+	      <p>Also contains management tools for administrator accounts like account blocking, adding money to a card and managing payment services.</p>
+	      <p>The websocket server gives the app realtime updates for things like updating balance upon receiving a transaction, while the backend server acts like an API and implements authentication through OAuth. All interface logic is handled by Vue.</p>
+	      <br>
+	      <div class="card-gallery card-detail">
+		<img src="img/portfolio/vCard_table1.png" width=40%/>
+		<img src="img/portfolio/vCard_table2.png" width=40%/>
+	      </div>
+	    </div>
+	    <div class="card-badge"><strong>2022</strong></div>
 	  </div>
-	</div>
-	<div class="card-badge"><strong>2022</strong></div>
-      </div>
-      <div class="card">
-	<h1><em>Regul-A Platform 2.0</em></h1>
-	<strongish> 
-	  <p>Laravel (PHP) website + Android App (Kotlin) + Firebase</p>
-	</strongish>
-	  <p>Mobile app to help caretakers of children with ASD and website for health professionals.</p><br>
-	<div class="card-detail">
-	  <p>This was my final project in university. I developed a new version of the existing platform, focusing on making it ready for a product launch.</p>
-	  <br>
-	  <h3>Some of the issues I tackled:</h3><br>
-	  <ul>
-	    <li>Converted the mobile app from Java to Kotlin</li>
-	    <li>Added monitoring capabilities with Google Analytics and Firebase Crashlytics;</li>
-	    <li>Created end-to-end tests in both interfaces and unit tests for security rules;</li>
-	    <li>Deployed the web server using NixOS and created a CI/CD pipeline;</li>
-	  </ul>
-	  <br>
-	  <p>Unfortunately, I cannot share the source code.</p><br>
-	</div>
-	<div class="card-gallery">
-	  <img src="img/portfolio/regula_web.png" width="70%"/>
-	  <img src="img/portfolio/regula_android.png" width="25%" />
-	  <!-- TODO: pic of CI/CD -->
-	  <!-- tests running excert in video (convert to gif if possible) -->
-	</div>
-	<div class="card-badge"><strong>2022</strong></div>
-      </div>
-      <div class="card">
-	<h1 style="display: inline"><em>lyricRacer </em></h1><a class="card-detail" href="https://github.com/iogrt/lyricRacer" target="_blank">source code </a><br>
-	<p><strongish>Single Page App in React + Typescript + Styled Components</strongish></p>
-	<p>A <a target="_blank" href="https://play.typeracer.com/">typeracer</a> clone website where you try to type lyrics of a song as fast as you can.</p><br>
-	<img src="img/portfolio/lyricRacer1.png" width="100%" class="card-front"/>
-	<div class="card-detail">
-	  <p>I have a demo website for you to <a href="https://kind-blackwell-6683ac.netlify.app/" target="_blank">try it out</a></p><br>
-	  <p>In the homepage, you can search for a song</p>
-	  <div>
-	    <img src="img/portfolio/lyricRacer1.png" width="100%"/>
-	    <p>Upon selecting your song. You can then type out the lyrics.</p>
-	    <img src="img/portfolio/lyricRacer2.png" width="100%" style="max-width:500px;" />
+	  <div class="card">
+	    <h1><em>Regul-A Platform 2.0</em></h1>
+	    <strongish> 
+	      <p>Laravel (PHP) website + Android App (Kotlin) + Firebase</p>
+	    </strongish>
+	    <p>Mobile app to help caretakers of children with ASD and website for health professionals.</p><br>
+	    <div class="card-detail">
+	      <p>This was my final project in university. I developed a new version of the existing platform, focusing on making it ready for a product launch.</p>
+	      <br>
+	      <h3>Some of the issues I tackled:</h3><br>
+	      <ul>
+		<li>Converted the mobile app from Java to Kotlin</li>
+		<li>Added monitoring capabilities with Google Analytics and Firebase Crashlytics;</li>
+		<li>Created end-to-end tests in both interfaces and unit tests for security rules;</li>
+		<li>Deployed the web server using NixOS and created a CI/CD pipeline;</li>
+	      </ul>
+	      <br>
+	      <p>Unfortunately, I cannot share the source code.</p><br>
+	    </div>
+	    <div class="card-gallery">
+	      <img src="img/portfolio/regula_web.png" width="70%"/>
+	      <img src="img/portfolio/regula_android.png" width="25%" />
+	      <!-- TODO: pic of CI/CD -->
+	      <!-- tests running excert in video (convert to gif if possible) -->
+	    </div>
+	    <div class="card-badge"><strong>2022</strong></div>
 	  </div>
-	  <!-- talk a bit about the technology and keywords -->
-	</div>
-	<div class="card-badge"><strong>2020</strong></div>
-      </div>
-      <div class="card">
-	<h1><em>Engineer Layout</em></h1>
-	<p><strongish>Haskell package</strongish></p>
-	<p>Layout for the <a href="https://xmonad.org/" target="_blank">XMonad</a> Window Manager</p><br>
-	<img class="card-front"src="img/portfolio/engineer_layout.gif" width="100%"/>
-	<div class="card-detail">
-	  <img src="img/portfolio/engineer_layout.gif" width="80%" style="display: block;margin: auto;"/>
-	  <br><br>
-	  <p class="card-detail">I built a customizable layout for the XMonad Window Manager.  It allows you to set pre-defined layouts for when a specific group of windows is present on the workspace. Window categories and how to categorise them is left up to you to define.</p>
+	  <div class="card">
+	    <h1 style="display: inline"><em>lyricRacer </em></h1><a class="card-detail" href="https://github.com/iogrt/lyricRacer" target="_blank">source code </a><br>
+	    <p><strongish>Single Page App in React + Typescript + Styled Components</strongish></p>
+	    <p>A <a target="_blank" href="https://play.typeracer.com/">typeracer</a> clone website where you try to type lyrics of a song as fast as you can.</p><br>
+	    <img src="img/portfolio/lyricRacer1.png" width="100%" class="card-front"/>
+	    <div class="card-detail">
+	      <p>I have a demo website for you to <a href="https://kind-blackwell-6683ac.netlify.app/" target="_blank">try it out</a></p><br>
+	      <p>In the homepage, you can search for a song</p>
+	      <div>
+		<img src="img/portfolio/lyricRacer1.png" width="100%"/>
+		<p>Upon selecting your song. You can then type out the lyrics.</p>
+		<img src="img/portfolio/lyricRacer2.png" width="100%" style="max-width:500px;" />
+	      </div>
+	      <!-- talk a bit about the technology and keywords -->
+	    </div>
+	    <div class="card-badge"><strong>2020</strong></div>
 	  </div>
-	<div class="card-badge"><strong>2021</strong></div>
-      </div>
-      <div class="card">
-	<h1 style="display: inline"><em>MagicShirt </em></h1><a class="card-detail" href="https://github.com/iogrt/magicshirt" target="_blank">source code </a><br>
-	<p><strongish>Laravel (PHP)<strongish></p>
-	<p>T-shirt printing service website</p>
+	  <div class="card">
+	    <h1><em>Engineer Layout</em></h1>
+	    <p><strongish>Haskell package</strongish></p>
+	    <p>Layout for the <a href="https://xmonad.org/" target="_blank">XMonad</a> Window Manager</p><br>
+	    <img class="card-front"src="img/portfolio/engineer_layout.gif" width="100%"/>
+	    <div class="card-detail">
+	      <img src="img/portfolio/engineer_layout.gif" width="80%" style="display: block;margin: auto;"/>
+	      <br><br>
+	      <p class="card-detail">I built a customizable layout for the XMonad Window Manager.  It allows you to set pre-defined layouts for when a specific group of windows is present on the workspace. Window categories and how to categorise them is left up to you to define.</p>
+	    </div>
+	    <div class="card-badge"><strong>2021</strong></div>
+	  </div>
+	  <div class="card">
+	    <h1 style="display: inline"><em>MagicShirt </em></h1><a class="card-detail" href="https://github.com/iogrt/magicshirt" target="_blank">source code </a><br>
+	    <p><strongish>Laravel (PHP)<strongish></p>
+	    <p>T-shirt printing service website</p>
 
-	<img src="img/portfolio/magicshirt_detail.png" width="100%" style="max-width: 700px"/>
-	<div class="card-detail">
-	  <br>
-	  <p>You can pick from a variety of designs, customizing the size and color of the shirt. <br> A cart system is also implemented.</p>
-	  </br>
-	  <div style="display: flex; flex-wrap: wrap; gap: 10px 0;">
-	    <img src="img/portfolio/magicshirt_home.png" style="max-width: 58%; min-width: 300px"/>
-	    <img src="img/portfolio/magicshirt_cart.png" width="40%" style="min-width: 200px"/>
+	    <img src="img/portfolio/magicshirt_detail.png" width="100%" style="max-width: 700px"/>
+	    <div class="card-detail">
+	      <br>
+	      <p>You can pick from a variety of designs, customizing the size and color of the shirt. <br> A cart system is also implemented.</p>
+	    </br>
+	    <div style="display: flex; flex-wrap: wrap; gap: 10px 0;">
+	      <img src="img/portfolio/magicshirt_home.png" style="max-width: 58%; min-width: 300px"/>
+	      <img src="img/portfolio/magicshirt_cart.png" width="40%" style="min-width: 200px"/>
+	    </div>
+	    </div>
+	    <div class="card-badge"><strong>2021</strong></div>
 	  </div>
 	</div>
-	<div class="card-badge"><strong>2021</strong></div>
       </div>
     </div>
-  </div>
-  </div>
-</body>
-<script>
-  var cards = document.querySelectorAll(".card");
-  var backBtn = document.querySelector('#portfolio-back')
+  </body>
+  <script>
+    var cards = document.querySelectorAll(".card");
+    var backBtn = document.querySelector('#portfolio-back')
 
-  cards.forEach(x => x.addEventListener(
-    'click',
-    () => {
-      cards.forEach(y=> y.classList.add('card-hide'));/* css overriding power! */
-      x.classList.add('card-zoom');
-      backBtn.style.display = "block";
-    }
-  ));
+    cards.forEach(x => x.addEventListener(
+      'click',
+      () => {
+	cards.forEach(y=> y.classList.add('card-hide'));/* css overriding power! */
+	x.classList.add('card-zoom');
+	backBtn.style.display = "block";
+      }
+    ));
 
-  backBtn.addEventListener('click', () => {
-    cards.forEach(x =>
-      x.classList.remove('card-hide','card-zoom')
-    )
-    backBtn.style.display = "none";
-  })
-</script>
+    backBtn.addEventListener('click', () => {
+      cards.forEach(x =>
+	x.classList.remove('card-hide','card-zoom')
+      )
+      backBtn.style.display = "none";
+    })
+  </script>
+</html>
