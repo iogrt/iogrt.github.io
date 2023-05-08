@@ -10,6 +10,7 @@ body {
 strongish { font-weight: 500; }
 
 /* apply some basic styles */
+h1 { margin-bottom: 0.7em; }
 p {margin-bottom: 0.5em;}
 a { color: inherit; }
 ul {list-style-position: inside;}
@@ -47,7 +48,6 @@ a[target="_blank"]:after {
     background-color: #1ADDD055;
     padding-left: 80px;
     min-height: 40px;
-    margin-bottom: 30px; /* give space due to logo */
 }
 .nav > * {
     border-radius: 0 0 50px 0;
@@ -84,7 +84,8 @@ a[target="_blank"]:after {
     align-items: center;
     z-index: 1;
 
-    font-weight: 300; font-size: 1.3em;
+    font-size: 1.3em;
+    font-family: 'Space Mono', monospace;
 }
 .section {
     border-right: 2px solid white;
@@ -110,7 +111,7 @@ a[target="_blank"]:after {
     align-items: flex-start;
     margin-bottom: 30px;
 }
-.card::before{
+.card::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -123,6 +124,10 @@ a[target="_blank"]:after {
     /* filter: invert(83%) sepia(10%) saturate(640%) brightness(58%) contrast(150%); */
     filter: invert(100%) brightness(40%) saturate(200%);
 }
+
+.card, .jumbo {
+    position:relative;
+}
 .card {
     position:relative;
     min-height: 200px;
@@ -133,9 +138,6 @@ a[target="_blank"]:after {
     transition: transform 0.5s, border-color 0.5s ease-out; /* for hovers  and zooms back*/
     transform-origin: top left;
 }
-.card-hide {
-    display: none;
-}
 @keyframes appear {
     from {
 	opacity: 0;
@@ -143,14 +145,6 @@ a[target="_blank"]:after {
     to {
 	opacity: 1;
     }
-}
-.card-zoom {
-    display: block; /* override hide */
-    border-color: #2AC4BA;
-
-    font-size: 1.3em;
-    grid-area: 1 / 1 / -1 / -1;
-    animation: appear 0.7s;
 }
 .card:hover:not(.card-zoom){
     border-color: #2AC4BA;
@@ -221,4 +215,52 @@ a[target="_blank"]:after {
     100% {
 	transform: translateX(0px);
     }
+}
+
+
+.jumbo {
+    margin: 40px 0;
+    min-width: 80%; /* paradoxically makes it so that content is slightly shifted when big, and no difference when small! */
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+
+    margin-bottom: 150px;
+}
+
+.jumbogif {
+    box-shadow: 0px 0px 20px 10px rgba(135, 230, 190,0.6);
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+.jumbotext {
+    padding: 2em 3em;
+}
+
+.card-hide {
+    display: none;
+}
+/* DONT WRITE BELOW, give priority to card hide */
+
+.card-zoom {
+    display: block; /* override hide */
+    border-color: #2AC4BA;
+
+    font-size: 2em;
+    grid-area: 1 / 1 / -1 / -1;
+    animation: appear 0.7s;
+}
+
+.langtag {
+    padding: 0.2em 0.4em;
+    display: inline-block;
+}
+.langtag-img {
+    height: 1.2em;
+    vertical-align: top;
+    margin-right: 0.5em;
 }

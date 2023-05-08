@@ -1,13 +1,14 @@
 <html prefix="og: https://ogp.me/ns#">
   <head>
-    <title>Duarte Dias' portfolio</title>
+    <title>iogrt's portfolio</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Duarte Dias' portfolio"/>
+    <meta property="og:title" content="iogrt's portfolio"/>
     <meta property="og:url" content="https://iogrt.github.io"/>
     <meta property="og:image" content="img/bmo.PNG" />
     
@@ -18,14 +19,35 @@
 	<div class="logo">
 	  <img src="img/bmo.PNG" class="logo-img"/>
 	</div>
-	<h2 class="title">Duarte Dias</h2>
+	<h2 class="title">Iogrt</h2>
       </nav>
+	<div class="jumbo">
+	  <div>
+	    <img src="img/bmo-kickflip.gif" class="jumbogif"/>
+	  </div>
+	  <div class="jumbotext">
+	    <h1>👋 Welcome</h1>
+	    <p>I'm a software developer based in Portugal 🇵🇹.</p>
+
+	    <br>
+	    <p>
+	      Love doing <em>succint</em> functional programming <br> through <span class="langtag" style="background-color: #522545;"><img src="img/haskell.png" class="langtag-img"/>Haskell</span> and micro services in <span class="langtag" style="background-color: #990000;"><img src="img/scala.png" class="langtag-img"/>Scala</span>
+	    </p>
+	    <br>
+	    <p>
+	      My power tools include: <a href="https://nixos.org/" target="_blank">NixOS</a> , <a href="https://github.com/jesseduffield/lazygit" target="_blank">Lazygit</a> <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a> and <a href="https://xmonad.org">XMonad</a>
+	    </p>
+	    <br>
+	    <p>Check out what I'm working on at <span class="langtag" style="background-color: #000000;"><a target="_blank" href="https://github.com/iogrt"><i class="fa-brands fa-github langtag-img"></i>Github</a></span></p>
+
+	  </div>
+	</div>
       <div class="main">
 	<button id="portfolio-back"><strong><i class="fa fa-arrow-left" aria-hidden="true"></i> SEE ALL</strong></button>
 	<div class="cardbox">
 	  <div class="card" style="max-width: 900px"> <!-- keep a small size on zoom -->
 	    <!-- TODO: css this -->
-	    <h1>📌<em> About me </em></h1>
+	    <h1 style="display: inline">📌<em> About me </em></h1>
 	    <br>
 	    <!-- break lines more often -->
 	    <p>Hello, I'm a software developer based in Portugal 🇵🇹. <br> I started out in middle school coding as a hobby in the Unity game engine. </p>
@@ -150,19 +172,20 @@
   </body>
   <script>
     var cards = document.querySelectorAll(".card");
+    var hidables = document.querySelectorAll(".card, .jumbo");
     var backBtn = document.querySelector('#portfolio-back')
 
     cards.forEach(x => x.addEventListener(
       'click',
       () => {
-	cards.forEach(y=> y.classList.add('card-hide'));/* css overriding power! */
+	hidables.forEach(y=> y.classList.add('card-hide'));/* css overriding power! */
 	x.classList.add('card-zoom');
 	backBtn.style.display = "block";
       }
     ));
 
     backBtn.addEventListener('click', () => {
-      cards.forEach(x =>
+      hidables.forEach(x =>
 	x.classList.remove('card-hide','card-zoom')
       )
       backBtn.style.display = "none";
