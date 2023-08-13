@@ -1,6 +1,7 @@
 <html prefix="og: https://ogp.me/ns#">
   <head>
     <title>iogrt's portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +11,10 @@
 
     <meta property="og:title" content="iogrt's portfolio"/>
     <meta property="og:url" content="https://iogrt.github.io"/>
+
     <meta property="og:image" content="img/bmo.PNG" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
   </head>
   <body>
@@ -22,8 +26,8 @@
 	<h2 class="title">Iogrt</h2>
       </nav>
 	<div class="jumbo">
-	  <div>
-	    <img src="img/bmo-kickflip.gif" class="jumbogif"/>
+	  <div class="jumbogif">
+	    <img src="img/bmo-kickflip.gif"/>
 	  </div>
 	  <div class="jumbotext">
 	    <h1>👋 Welcome</h1>
@@ -38,7 +42,7 @@
 	      My power tools include: <a href="https://nixos.org/" target="_blank">NixOS</a> , <a href="https://github.com/jesseduffield/lazygit" target="_blank">Lazygit</a> <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a> and <a href="https://xmonad.org">XMonad</a>
 	    </p>
 	    <br>
-	    <p>Check out what I'm working on at <span class="langtag" style="background-color: #000000;"><a target="_blank" href="https://github.com/iogrt"><i class="fa-brands fa-github langtag-img"></i>Github</a></span></p>
+	    <p>Check out what I'm working on at my <span class="langtag" style="background-color: #000000;"><a target="_blank" href="https://github.com/iogrt"><i class="fa-brands fa-github langtag-img"></i>Github</a></span></p>
 
 	  </div>
 	</div>
@@ -64,7 +68,7 @@
 	  <div class="card">
 	    <h1 style="display: inline"><em>vCard </em></h1><a class="card-detail" href="https://github.com/iogrt/vCard" target="_blank">source code </a>
 	    <p><strongish>Laravel (PHP) + Websockets (Node.js) + Vue (Javascript)</strongish></p>
-	    <p>Single Page App for virtual banking cards</p><br/>
+	    <p>Full stack Single Page App for virtual banking cards</p><br/>
 	    <div class="card-front">
 	      <img src="img/portfolio/vCard_homepage.png" width=100%/>
 	    </div>
@@ -138,16 +142,34 @@
 	    <div class="card-badge"><strong>2020</strong></div>
 	  </div>
 	  <div class="card">
-	    <h1><em>Engineer Layout</em></h1>
+	    <h1 style="display:inline"><em>Engineer Layout </em></h1>
+      <a class="card-detail" href="https://github.com/iogrt/XMonadEngineerLayout" target="_blank">source code </a><br>
+
 	    <p><strongish>Haskell package</strongish></p>
 	    <p>Layout for the <a href="https://xmonad.org/" target="_blank">XMonad</a> Window Manager</p><br>
+
 	    <img class="card-front"src="img/portfolio/engineer_layout.gif" width="100%"/>
 	    <div class="card-detail">
 	      <img src="img/portfolio/engineer_layout.gif" width="80%" style="display: block;margin: auto;"/>
 	      <br><br>
-	      <p class="card-detail">I built a customizable layout for the XMonad Window Manager.  It allows you to set pre-defined layouts for when a specific group of windows is present on the workspace. Window categories and how to categorise them is left up to you to define.</p>
+	      <p>I built a customizable layout for the XMonad Window Manager.  It allows you to set pre-defined layouts for when a specific group of windows is present on the workspace. Window categories and how to categorise them is left up to you to define.</p>
 	    </div>
 	    <div class="card-badge"><strong>2021</strong></div>
+	  </div>
+	  <div class="card">
+	    <h1 style="display:inline"><em>keymap viewer </em></h1>
+      <a class="card-detail" href="https://github.com/iogrt/xmonadkeymap" target="_blank">source code </a><br>
+	    <p><strongish>Haskell package</strongish></p>
+	    <p>Utility to view keys for the <a href="https://xmonad.org/" target="_blank">XMonad</a> Window Manager</p><br>
+	    <img class="card-front" src="img/portfolio/xmonadkeymap.png" width="100%"/>
+	    <div class="card-detail">
+	      <img src="img/portfolio/xmonadkeymap.png" width="80%" style="display: block;margin: auto;"/>
+	      <br><br>
+		  <p>I never knew what keys I could bind to new shortcuts in my window manager,</p>
+		  <p>so combining some existing utilities like xkbprint and the power of bash scripts</p>
+		  <p>I was able to create an altered postscript code that paints keys which you have already used</p>
+	    </div>
+	    <div class="card-badge"><strong>2023</strong></div>
 	  </div>
 	  <div class="card">
 	    <h1 style="display: inline"><em>MagicShirt </em></h1><a class="card-detail" href="https://github.com/iogrt/magicshirt" target="_blank">source code </a><br>

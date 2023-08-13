@@ -161,11 +161,6 @@ a[target="_blank"]:after {
     display: none;
 }
 
-/* .card-zoom img {
-    width: 30vw;
-} */
-
-
 .card-gallery {
     display: flex;
     align-items: flex-start;
@@ -185,8 +180,25 @@ a[target="_blank"]:after {
 .cardbox {
     width: 100%;
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 1rem;
+    /**
+      FROM: https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+   * User input values.
+   */
+  --grid-layout-gap: 10px;
+  --grid-column-count: 3;
+  --grid-item--min-width: 350px;
+
+  /**
+   * Calculated values.
+   */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
     box-sizing: border-box;
 }
 #portfolio-back {
@@ -221,24 +233,47 @@ a[target="_blank"]:after {
 .jumbo {
     margin: 40px 0;
     min-width: 80%; /* paradoxically makes it so that content is slightly shifted when big, and no difference when small! */
-    padding: 0 70px;
+    padding: 0 min(70px,2%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1400px;
+    margin-bottom: 50px;
+}
 
-    margin-bottom: 150px;
+@media only screen and (max-width: 1000px) {
+  .jumbo {
+    /*remove big gap*/
+    margin-bottom: 0;
+  }  
 }
 
 .jumbogif {
     box-shadow: 0px 0px 20px 10px rgba(135, 230, 190,0.6);
     border-radius: 1rem;
     margin: 10px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 500px;
+    min-width: 200px;
+}
+.jumbogif > img {
+    width: 100%;
 }
 
 .jumbotext {
     padding: 2em 3em;
+}
+
+.langtag {
+    padding: 0.2em 0.4em;
+    display: inline-block;
+}
+.langtag-img {
+    height: 1.2em;
+    vertical-align: top;
+    margin-right: 0.5em;
 }
 
 .card-hide {
@@ -250,17 +285,7 @@ a[target="_blank"]:after {
     display: block; /* override hide */
     border-color: #2AC4BA;
 
-    font-size: 2em;
+    font-size: 1.1rem;
     grid-area: 1 / 1 / -1 / -1;
     animation: appear 0.7s;
-}
-
-.langtag {
-    padding: 0.2em 0.4em;
-    display: inline-block;
-}
-.langtag-img {
-    height: 1.2em;
-    vertical-align: top;
-    margin-right: 0.5em;
 }
